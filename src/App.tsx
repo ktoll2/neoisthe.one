@@ -1,5 +1,17 @@
-import video from "./NeoIsTheOne.mp4" 
+import { useEffect } from "react";
+import video from "./NeoIsTheOne.mp4"
 function App() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "js/main.js";
+    script.type = "module";
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, []);
+
   return (
     <div className="App absolute text-white w-screen h-screen">
       <div className="flex flex-col h-full w-full items-center justify-center">

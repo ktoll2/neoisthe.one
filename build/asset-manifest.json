@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.d7231f87.css",
-    "main.js": "/static/js/main.d2601f80.js",
+    "main.js": "/static/js/main.898f6b95.js",
     "static/media/NeoIsTheOne.mp4": "/static/media/NeoIsTheOne.87ed5e9844a42b2a167c.mp4",
     "index.html": "/index.html",
     "main.d7231f87.css.map": "/static/css/main.d7231f87.css.map",
-    "main.d2601f80.js.map": "/static/js/main.d2601f80.js.map"
+    "main.898f6b95.js.map": "/static/js/main.898f6b95.js.map"
   },
   "entrypoints": [
     "static/css/main.d7231f87.css",
-    "static/js/main.d2601f80.js"
+    "static/js/main.898f6b95.js"
   ]
 }
