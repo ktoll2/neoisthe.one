@@ -6,7 +6,7 @@ function App() {
         <video className="w-11/12" controls>
           <source src={video} type="video/mp4"></source>
         </video>
-        <span className=" text-sm">The Matrix&copy; is owned by Warner Bros. Pictures.</span>
+        <span className="text-shadow-border text-sm">The Matrix&copy; is owned by Warner Bros. Pictures.</span>
       </div>
     </div>
   );

@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @supports (padding-top: env(safe-area-inset-top)) {
   body {
     padding: 0;
     height: calc(100% + env(safe-area-inset-top));
   }
 }
+
 body {
   background: black;
   overflow: hidden;
@@ -82,3 +84,11 @@ p {
   border-color: crimson;
   color: white;
 } 
+
+.text-shadow-border {
+  text-shadow:
+      1px 1px 1px black,
+      -1px -1px 1px black,
+      1px -1px 1px black,
+      -1px 1px 1px black;
+}
