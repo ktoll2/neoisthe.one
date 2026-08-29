@@ -33,15 +33,44 @@ body {
   justify-items: start;
   gap: 0.45rem;
   padding: 1.5rem;
-  background: #000;
+  background:
+    radial-gradient(ellipse at center, transparent 55%, rgb(0 0 0 / 0.45) 100%),
+    repeating-linear-gradient(
+      to bottom,
+      rgb(91 255 117 / 0.025) 0,
+      rgb(91 255 117 / 0.025) 1px,
+      transparent 1px,
+      transparent 8px
+    ),
+    #000;
   color: hsl(108 90% 70%);
   font-family: "Courier New", Courier, monospace;
   font-size: clamp(0.9rem, 2vw, 1.25rem);
   letter-spacing: 0.12em;
+  text-shadow: 0 0 4px hsl(108 90% 70% / 0.7);
+  isolation: isolate;
+  overflow: hidden;
   transition: opacity 500ms ease, visibility 500ms step-end;
 }
 
+.boot-screen::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.boot-screen::before {
+  background: rgb(180 255 190 / 0.08);
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: crt-flicker 4s steps(1) infinite;
+}
+
 .boot-line {
+  position: relative;
+  z-index: 1;
   width: fit-content;
   min-height: 1.2em;
   margin: 0;
@@ -55,6 +84,22 @@ body {
 @keyframes cursor-blink {
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes crt-flicker {
+  0%,
+  93%,
+  100% {
+    opacity: 0;
+  }
+
+  94% {
+    opacity: 0.4;
+  }
+
+  95% {
+    opacity: 0.12;
   }
 }
 
@@ -118,6 +163,10 @@ body.boot-complete .boot-screen {
   }
 
   .boot-line.is-active::after {
+    animation: none;
+  }
+
+  .boot-screen::before {
     animation: none;
   }
 }
