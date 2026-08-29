@@ -8,7 +8,7 @@ function transitionToPage() {
   setTimeout(() => {
     document.body.classList.remove("rain-over-boot");
     document.body.classList.add("boot-fading");
-    setTimeout(() => document.body.classList.add("boot-complete"), 500);
+    setTimeout(() => document.body.classList.add("boot-complete"), 1500);
   }, 3000);
 }
 
@@ -23,7 +23,7 @@ function typeLine(line, text) {
         clearInterval(timer);
         resolve();
       }
-    }, 65);
+    }, 150);
   });
 }
 
@@ -46,12 +46,12 @@ async function runBootSequence() {
     await typeLine(line, line.dataset.bootLine);
 
     if (line === bootLines[bootLines.length - 1]) {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 3500));
       transitionToPage();
       return;
     }
 
-    await new Promise((resolve) => setTimeout(resolve, 700));
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     line.classList.remove("is-active");
   }
 }

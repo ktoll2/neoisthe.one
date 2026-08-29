@@ -79,7 +79,7 @@ body.rain-over-boot #rain {
   text-shadow: 0 0 4px hsl(108 90% 70% / 0.7);
   isolation: isolate;
   overflow: hidden;
-  transition: opacity 500ms ease, visibility 500ms step-end;
+  transition: opacity 1.5s ease, visibility 1.5s step-end;
 }
 
 .boot-screen::before {
