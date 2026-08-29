@@ -1,6 +1,6 @@
 const canvas = document.querySelector("#rain");
 const context = canvas.getContext("2d");
-const glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*+-=<>";
+const glyphs = "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜ0123456789@#$%&*+-=<>";
 const fontSize = 18;
 let columns = [];
 let lastFrame = 0;
