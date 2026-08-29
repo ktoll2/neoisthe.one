@@ -10,7 +10,8 @@ function resize() {
   canvas.width = Math.floor(window.innerWidth * scale);
   canvas.height = Math.floor(window.innerHeight * scale);
   context.setTransform(scale, 0, 0, scale, 0, 0);
-  columns = Array.from({ length: Math.ceil(window.innerWidth / fontSize) }, () => Math.random() * -50);
+  const startOffset = Math.ceil(window.innerHeight / fontSize) + 50;
+  columns = Array.from({ length: Math.ceil(window.innerWidth / fontSize) }, () => Math.random() * -startOffset);
 }
 
 function draw(timestamp) {

@@ -49,6 +49,10 @@ body::after {
   transition: opacity 1s ease;
 }
 
+body.rain-over-boot #rain {
+  opacity: 1;
+}
+
 .boot-screen {
   position: fixed;
   z-index: 4;
@@ -91,6 +95,20 @@ body::after {
   mix-blend-mode: screen;
   opacity: 0;
   animation: crt-flicker 4s steps(1) infinite;
+}
+
+body.rain-over-boot .boot-screen,
+body.boot-fading .boot-screen {
+  background:
+    radial-gradient(ellipse at center, transparent 55%, rgb(0 0 0 / 0.45) 100%),
+    repeating-linear-gradient(
+      to bottom,
+      rgb(91 255 117 / 0.025) 0,
+      rgb(91 255 117 / 0.025) 1px,
+      transparent 1px,
+      transparent 8px
+    ),
+    rgb(0 0 0 / 0.45);
 }
 
 .boot-line {
@@ -180,6 +198,7 @@ video {
   transition: opacity 1s ease;
 }
 
+body.boot-fading #rain,
 body.boot-complete #rain,
 body.boot-complete main,
 body.boot-complete .legal-disclaimer {
@@ -190,6 +209,7 @@ body.boot-complete main {
   transform: none;
 }
 
+body.boot-fading .boot-screen,
 body.boot-complete .boot-screen {
   visibility: hidden;
   opacity: 0;

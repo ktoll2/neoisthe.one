@@ -1,9 +1,15 @@
 const bootLines = document.querySelectorAll("[data-boot-line]");
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-function revealPage() {
-  document.body.classList.add("boot-complete");
+function transitionToPage() {
   dispatchEvent(new Event("bootcomplete"));
+  document.body.classList.add("rain-over-boot");
+
+  setTimeout(() => {
+    document.body.classList.remove("rain-over-boot");
+    document.body.classList.add("boot-fading");
+    setTimeout(() => document.body.classList.add("boot-complete"), 500);
+  }, 3000);
 }
 
 function typeLine(line, text) {
@@ -26,7 +32,7 @@ async function runBootSequence() {
     bootLines.forEach((line) => {
       line.textContent = line.dataset.bootLine;
     });
-    setTimeout(revealPage, 250);
+    setTimeout(transitionToPage, 250);
     return;
   }
 
@@ -41,7 +47,7 @@ async function runBootSequence() {
 
     if (line === bootLines[bootLines.length - 1]) {
       await new Promise((resolve) => setTimeout(resolve, 2000));
-      revealPage();
+      transitionToPage();
       return;
     }
 
