@@ -46,11 +46,15 @@ body::after {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 1s ease, filter 200ms ease;
 }
 
 body.rain-over-boot #rain {
   opacity: 1;
+}
+
+body.matrix-overdrive #rain {
+  filter: brightness(1.6) saturate(1.4) drop-shadow(0 0 8px hsl(108 90% 70% / 0.9));
 }
 
 .boot-screen {

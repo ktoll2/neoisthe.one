@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
   <title id="title">Neo Is The One</title>
   <rect width="1200" height="630" fill="#000"/>
   <g fill="#0b5427" font-family="monospace" font-size="15" opacity=".75">
@@ -18,5 +18,5 @@
   <rect x="108" y="176" width="984" height="276" rx="20" fill="#000" fill-opacity=".82" stroke="#1b9b42" stroke-width="2"/>
   <text x="600" y="270" fill="#baffce" font-family="monospace" font-size="31" font-weight="700" text-anchor="middle" letter-spacing="9">NEOISTHE.ONE</text>
   <text x="600" y="362" fill="#42ff7e" font-family="monospace" font-size="76" font-weight="700" text-anchor="middle">I KNOW KUNG-FU</text>
-  <text x="600" y="412" fill="#75cc90" font-family="monospace" font-size="20" text-anchor="middle" letter-spacing="5">FOLLOW THE WHITE RABBIT</text>
+  <text x="600" y="412" fill="#75cc90" font-family="monospace" font-size="20" text-anchor="middle" letter-spacing="5">FREE YOUR MIND</text>
 </svg>
